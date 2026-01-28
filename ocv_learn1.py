@@ -102,7 +102,7 @@ def remove_border(image):
     cnt_sorted = sorted(contours,key=lambda x:cv.contourArea(x))
     cnt = cnt_sorted[-1]
     x,y,w,h = cv.boundingRect(cnt)
-    crop = img[y:y+h,x:x+w]
+    crop = image[y:y+h,x:x+w]
     return (crop)
 
 img_file = "data/page_01.jpg"
